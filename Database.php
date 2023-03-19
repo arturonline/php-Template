@@ -2,27 +2,21 @@
 
 class Database
 {
-
+    const PATH_TO_DB = 'database/database.db';
     public $connection;
 
     public function __construct($config, $user = "", $pass = "")
     {
-
-
-        $dsn = 'sqlsrv:' . http_build_query($config, '', ';');
-
-        $this->connection = new PDO($dsn, $user, $pass, [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        ]);
+        if ($this->connection == null) {
+            $this->connection = new \PDO("sqlite:" . Config::PATH_TO_DB);
+        }
+        return $this->connection;
     }
 
     public function query($query, $params = [])
     {
-
         $stmt = $this->connection->prepare($query);
-
         $stmt->execute($params);
-
         return $stmt;
 
     }
