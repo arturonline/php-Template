@@ -3,10 +3,10 @@
 $heading = "Post";
 
 $config = require('config.php');
-$db = new Database($config['database']);
+$db = new SqliteDb($config['sqlite']);
 
 $id = $_GET['id'];
-$query = "select * FROM Blog.posts WHERE Id = :id";
+$query = "select * FROM Posts WHERE post_id = :id";
 
 $post = $db->query($query, [$id])->fetch();
 

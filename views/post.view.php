@@ -5,8 +5,8 @@
 
     <main>
         <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            <p><?= $post["Id"] ?></p>
-            <p><?= $post["Title"] ?></p>
+            <p><?= $post["post_id"] ?></p>
+            <p><?= $post["post_title"] ?></p>
         </div>
     </main>
 

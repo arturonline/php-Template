@@ -1,9 +1,12 @@
 <?php
 
 return $config = [
-    'database' => [
+    'sqlserver' => [
         'server' => 'PROG-9044',
-        'Database' => 'Pruebas'
+        'Database' => 'Pruebas',
+    ],
+    'sqlite' => [
+        'Path' => 'database/database.db',
     ],
 
     // more configs

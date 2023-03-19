@@ -31,7 +31,6 @@ function routeToController($uri, $routes): void
 
 /**
  * Aborts the request and returns the appropriate error code
- * @param $code
  * @return void
  */
 function abort(): void

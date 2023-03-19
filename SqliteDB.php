@@ -1,19 +1,18 @@
 <?php
 
-class Database
+class SqliteDb
 {
-    const PATH_TO_DB = 'database/database.db';
     public $connection;
 
-    public function __construct($config, $user = "", $pass = "")
+    public function __construct($config)
     {
         if ($this->connection == null) {
-            $this->connection = new \PDO("sqlite:" . Config::PATH_TO_DB);
+            $this->connection = new \PDO("sqlite:" . $config['Path']);
         }
         return $this->connection;
     }
 
-    public function query($query, $params = [])
+    public function query($query, $params = []): false|PDOStatement
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute($params);
