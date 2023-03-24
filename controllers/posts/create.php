@@ -1,17 +1,14 @@
 <?php
 
+require base_path( 'Validator.php');
 
-require 'Validator.php';
-
-$config = require('config.php');
+$config = require base_path('config.php');
 $db = new SqliteDb($config['sqlite']);
 
-$heading = "Create new post entry";
+$errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Validation
-    $errors = [];
 
     if (! Validator::string($_POST['title'], 1, 1000)) {
         $errors['title'] = "Title is required a must be less than 1000 characters";
@@ -35,4 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
     }
 }
-require 'views/posts/create.view.php';
+
+view("posts/create.view.php", [
+    'heading' => "Create new post entry",
+    'errors' => $errors ?? []
+]);

@@ -1,8 +1,6 @@
 <?php
 
-$heading = "Post";
-
-$config = require('config.php');
+$config = require base_path('config.php');
 $db = new SqliteDb($config['sqlite']);
 
 $id = $_GET['id'];
@@ -15,4 +13,7 @@ $post = $db->query($query, [$id, $currentUser_id])->findorFail();
 authorize($post['user_id'] !== $currentUser_id);
 
 
-require "views/posts/show.view.php";
+view("posts/show.view.php", [
+    'heading' => "Show post entry",
+    'post' => $post
+]);

@@ -1,12 +1,12 @@
 <?php
 
-$heading = "Blog";
-
-
-$config = require('config.php');
+$config = require base_path('config.php');
 $db = new SqliteDb($config['sqlite']);
 
 $posts = $db->query("select * FROM posts")->get();
 
 
-require "views/posts/index.view.php";
+view("posts/index.view.php", [
+    'heading' => "Entries list",
+    'posts' => $posts
+]);

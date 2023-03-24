@@ -1,6 +1,6 @@
 <?php
 
-$routes = require 'routes.php';
+$routes = require base_path('routes.php');
 
 /**
  * Routes the request to the appropriate controller

@@ -2,7 +2,7 @@
 
 class SqliteDb
 {
-    public $connection;
+    public PDO $connection;
     public $statement;
 
     public function __construct($config)
