@@ -2,11 +2,11 @@
 
 return $config = [
     'sqlserver' => [
-        'server' => 'PROG-9044',
+        'Server' => 'PROG-9044',
         'Database' => 'Pruebas',
     ],
     'sqlite' => [
-        'Path' => 'database/database.db',
+        'Path' => 'sqlite:database/db.sqlite3',
     ],
 
     // more configs

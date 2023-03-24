@@ -1,15 +1,6 @@
 <?php
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-$routes = [
-    "/" => "controllers/index.php",
-    "/about" => "controllers/about.php",
-    "/blog" => "controllers/blog.php",
-    "/post" => "controllers/post.php",
-    "/contact" => "controllers/contact.php"
-];
-
+$routes = require 'routes.php';
 
 /**
  * Routes the request to the appropriate controller
@@ -24,23 +15,25 @@ function routeToController($uri, $routes): void
         require $routes[$uri];
     }
     else {
-        abort();
+        abort(404);
     }
 }
 
 
 /**
  * Aborts the request and returns the appropriate error code
+ * @param int $code 404, 403, 500, etc.
  * @return void
  */
-function abort(): void
+function abort(int $code = 404): void
 {
-    http_response_code();
+    http_response_code($code);
 
-    require 'views/404.php';
+    require "views/{$code}.php";
 
     die();
 }
 
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 routeToController($uri, $routes);
