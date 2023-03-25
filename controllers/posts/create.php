@@ -1,5 +1,9 @@
 <?php
 
+
+use Core\SqliteDb;
+use Core\Validator;
+
 require base_path( 'Validator.php');
 
 $config = require base_path('config.php');
