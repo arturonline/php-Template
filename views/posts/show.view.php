@@ -7,7 +7,14 @@
             <p><a href="/posts" class="text-blue-500 underline mb-6">Go back</a></p>
             <h3><?= htmlspecialchars($post['post_title']) ?></h3>
             <p><?= htmlspecialchars($post['post_body']) ?></p>
+
+            <form class="mt-6" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="id" value="<?= $post['post_id'] ?>">
+                <button class="text-sm text-red-500 hover:text-red-700 underline">Delete</button>
+            </form>
         </div>
+
     </main>
 
 <?php require base_path("views/partials/foot.php") ?>

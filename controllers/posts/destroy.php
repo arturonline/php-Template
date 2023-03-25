@@ -5,15 +5,19 @@ use Core\SqliteDb;
 $config = require base_path('config.php');
 $db = new SqliteDb($config['sqlite']);
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 $currentUser_id = 1;
 
-// Get post from db
+
+// 1. Check user authorization
 $query = "select * FROM posts WHERE post_id = :id and user_id = :user_id";
 $post = $db->query($query, [$id, $currentUser_id])->findorFail();
 authorize($post['user_id'] !== $currentUser_id);
 
-view("posts/show.view.php", [
-    'heading' => "Show post entry",
-    'post' => $post
-]);
+// 2. delete the post
+$query = "DELETE FROM posts WHERE post_id = :id and user_id = :user_id";
+$db->query($query, [$id, $currentUser_id]);
+
+// 3. redirect to posts index
+header("Location: /posts");
+exit();
