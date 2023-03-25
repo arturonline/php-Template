@@ -1,5 +1,7 @@
 <?php
 
+use Core\SqliteDb;
+
 $config = require base_path('config.php');
 $db = new SqliteDb($config['sqlite']);
 

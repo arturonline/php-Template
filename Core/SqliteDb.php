@@ -1,5 +1,8 @@
 <?php
 
+namespace Core;
+use PDO;
+
 class SqliteDb
 {
     public PDO $connection;
