@@ -1,9 +1,9 @@
 <?php
 
+use Core\App;
 use Core\SqliteDb;
 
-$config = require base_path('config.php');
-$db = new SqliteDb($config['sqlite']);
+$db = App::resolve(SqliteDb::class);
 
 $id = $_GET['id'];
 $currentUser_id = 1;

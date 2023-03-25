@@ -1,10 +1,10 @@
 <?php
 
+use Core\App;
 use Core\Validator;
 use Core\SqliteDb;
 
-$config = require base_path('config.php');
-$db = new SqliteDb($config['sqlite']);
+$db = App::resolve(SqliteDb::class);
 
 $errors = [];
 
