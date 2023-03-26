@@ -4,6 +4,10 @@ namespace Core;
 
 use Exception;
 
+/**
+ * A simple dependency injection container.
+ * @package Core
+ */
 class Container
 {
     protected $bindings = [];

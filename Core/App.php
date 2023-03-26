@@ -2,6 +2,10 @@
 
 namespace Core;
 
+/**
+ * Sets up the container and provides a static interface to it.
+ * @package Core
+ */
 class App
 {
     protected static $container;

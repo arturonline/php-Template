@@ -8,6 +8,10 @@
             <h3><?= htmlspecialchars($post['post_title']) ?></h3>
             <p><?= htmlspecialchars($post['post_body']) ?></p>
 
+            <footer class="mt-6">
+                <a href="/posts/edit?id=<?= $post['post_id'] ?>" class="text-gray-500 bordeer border-current px-3 py-1 rounded">Edit</a>
+            </footer>
+
             <form class="mt-6" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="id" value="<?= $post['post_id'] ?>">

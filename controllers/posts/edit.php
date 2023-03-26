@@ -1,5 +1,4 @@
 <?php
-
 use Core\App;
 use Core\SqliteDb;
 
@@ -14,7 +13,8 @@ $post = $db->query($query, [$id, $currentUser_id])->findorFail();
 
 authorize($post['user_id'] !== $currentUser_id);
 
-view("posts/show.view.php", [
-    'heading' => "Show post entry",
+view("posts/edit.view.php", [
+    'heading' => "Edit post entry",
+    'errors' => [],
     'post' => $post
 ]);
