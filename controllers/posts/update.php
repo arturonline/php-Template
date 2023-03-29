@@ -14,7 +14,7 @@ $query = "select * FROM posts WHERE post_id = :id";
 
 $post = $db->query($query, [$id])->findorFail();
 
-authorize($post['user_id'] == $currentUser_id);
+authorize($id == $currentUser_id);
 
 $errors = [];
 

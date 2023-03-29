@@ -15,3 +15,6 @@ $router->patch('/post', 'controllers/posts/update.php');
 
 $router->get('/posts/create', 'controllers/posts/create.php');
 $router->post('/posts', 'controllers/posts/store.php');
+
+$router->get('/register', 'controllers/registration/create.php');
+$router->post('/register', 'controllers/registration/store.php');
