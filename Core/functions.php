@@ -48,3 +48,25 @@ function view($path, $params = [])
     extract($params);
     return require base_path("views/{$path}");
 }
+
+function login($user): void
+{
+    // mark user has logged in.
+    $_SESSION['user'] = [
+        'email' => $user['email']
+        ];
+
+    // regenerate session id
+    session_regenerate_id(true);
+}
+
+function logout(): void
+{
+    // destroy session
+    $_SESSION = [];
+    session_destroy();
+
+// destroy cookie
+    $params = session_get_cookie_params();
+    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+}

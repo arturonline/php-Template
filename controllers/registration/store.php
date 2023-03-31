@@ -18,7 +18,7 @@ if(! Validator::string($password, 7, 255)){
 }
 
 if (! empty($errors)){
-    return view('registration/create', [
+    return view('registration/create.view.php', [
         'errors' => $errors
     ]);
 }
@@ -34,16 +34,18 @@ $user = $db->query('SELECT * FROM users WHERE user_email = :email', [
 if ($user) {
     header('Location: /');
     exit();
+
 } else {
-    $db->query('INSERT INTO users (user_email, user_password) VALUES (:email, :password)', [
+
+    $db->query('INSERT INTO users (user_name, user_email, user_hash) VALUES (:uname, :email, :password)', [
+        'uname' => "hola",
         'email' => $email,
-        'password' => password_hash($password, PASSWORD_DEFAULT)
+        'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
 
-    // mark user has logged in.
-    $_SESSION['user'] = [
-        'email' => $email,
-    ];
+    login([
+        'email' => $email
+    ]);
 
     header('Location: /');
     exit();
