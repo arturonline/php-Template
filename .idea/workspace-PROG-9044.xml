@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d51738ea-8d5c-436c-8157-fdb6bb2806e3" name="Changes" comment="Add register flow">
+      <change afterPath="$PROJECT_DIR$/.fleet/run.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Middleware/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Middleware/Guest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Middleware/Middleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registration/store.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registration/store.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.view.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="bde94cad-ad26-4f4d-bd86-7774e86dcfa2" name="localhost" port="8000" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\Users\artur.AICOM\OneDrive\Developer\repos\php\Projects\Template1" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
+  <component name="ProjectId" id="2N6VriIsZG1s8VyHyeChZdBZBHj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artur.AICOM/OneDrive/Developer/repos/php/Projects/Template1/controllers/registration&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;,
+      &quot;sqlite&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\artur.AICOM\OneDrive\Developer\repos\php\Projects\Template1\controllers\registration" />
+      <recent name="$PROJECT_DIR$/controllers/posts" />
+      <recent name="$PROJECT_DIR$/views/posts" />
+      <recent name="C:\Users\artur_0in438y\OneDrive\Developer\repos\php\Projects\Template1\views" />
+      <recent name="C:\Users\artur.AICOM\OneDrive\Developer\repos\php\Projects\Template1\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Core" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/views/posts" />
+      <recent name="$PROJECT_DIR$/controllers/posts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d51738ea-8d5c-436c-8157-fdb6bb2806e3" name="Changes" comment="" />
+      <created>1678984718862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678984718862</updated>
+      <workItem from="1678984719761" duration="124000" />
+      <workItem from="1679036419382" duration="1013000" />
+      <workItem from="1679038808930" duration="16000" />
+      <workItem from="1679038870364" duration="22000" />
+      <workItem from="1679038996716" duration="1197000" />
+      <workItem from="1679041734627" duration="768000" />
+      <workItem from="1679045126697" duration="2148000" />
+      <workItem from="1679049270337" duration="424000" />
+      <workItem from="1679049776792" duration="2237000" />
+      <workItem from="1679053182719" duration="985000" />
+      <workItem from="1679055287252" duration="2399000" />
+      <workItem from="1679130488338" duration="39000" />
+      <workItem from="1679130532599" duration="97000" />
+      <workItem from="1679245826634" duration="397000" />
+      <workItem from="1679246231576" duration="653000" />
+      <workItem from="1679246894000" duration="2456000" />
+      <workItem from="1679309172509" duration="781000" />
+      <workItem from="1679311666106" duration="2000" />
+      <workItem from="1679316040777" duration="2448000" />
+      <workItem from="1679325250283" duration="11000" />
+      <workItem from="1679412681160" duration="1094000" />
+      <workItem from="1679413853557" duration="244000" />
+      <workItem from="1679414182174" duration="329000" />
+      <workItem from="1679475389178" duration="58000" />
+      <workItem from="1679475460017" duration="171000" />
+      <workItem from="1679478716040" duration="772000" />
+      <workItem from="1679495419424" duration="619000" />
+      <workItem from="1679496051268" duration="850000" />
+      <workItem from="1679554825426" duration="170000" />
+      <workItem from="1679561690375" duration="66000" />
+      <workItem from="1679561969651" duration="23000" />
+      <workItem from="1679581737124" duration="1622000" />
+      <workItem from="1679589453483" duration="4000" />
+      <workItem from="1679644916606" duration="18000" />
+      <workItem from="1679644944016" duration="7422000" />
+      <workItem from="1679679176001" duration="6305000" />
+      <workItem from="1679742455362" duration="11461000" />
+      <workItem from="1679838373535" duration="3847000" />
+      <workItem from="1679923987176" duration="1381000" />
+      <workItem from="1680011021396" duration="507000" />
+      <workItem from="1680014783300" duration="13000" />
+      <workItem from="1680028220439" duration="1338000" />
+      <workItem from="1680031575142" duration="157000" />
+      <workItem from="1680080142657" duration="33000" />
+      <workItem from="1680096735411" duration="1459000" />
+      <workItem from="1680182987642" duration="1613000" />
+      <workItem from="1680198442663" duration="388000" />
+      <workItem from="1680198841988" duration="502000" />
+      <workItem from="1680262831536" duration="5000" />
+      <workItem from="1680502022895" duration="102000" />
+    </task>
+    <task id="LOCAL-00001" summary="Añadir soporte sqlite">
+      <created>1679248403738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679248403738</updated>
+    </task>
+    <task id="LOCAL-00002" summary="separar sqlserver y sqlite">
+      <created>1679249067636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679249067636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Añadir crear post y reorganizar archivos">
+      <created>1679684043761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679684043761</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Añadir método view y crear carpeta core">
+      <created>1679690043053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679690043053</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add namespaces">
+      <created>1679744400339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679744400340</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add namespaces">
+      <created>1679744415460</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679744415460</updated>
+    </task>
+    <task id="LOCAL-00007" summary="create store posts and destroy posts routes">
+      <created>1679766533382</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679766533382</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add db container">
+      <created>1679768524820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679768524820</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add edit and patch controller and view">
+      <created>1679841991911</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679841991911</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add register flow">
+      <created>1680097870995</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680097870995</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Añadir soporte sqlite" />
+    <MESSAGE value="separar sqlserver y sqlite" />
+    <MESSAGE value="Añadir crear post y reorganizar archivos" />
+    <MESSAGE value="Añadir método view y crear carpeta core" />
+    <MESSAGE value="add namespaces" />
+    <MESSAGE value="create store posts and destroy posts routes" />
+    <MESSAGE value="add db container" />
+    <MESSAGE value="add edit and patch controller and view" />
+    <MESSAGE value="Add register flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add register flow" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

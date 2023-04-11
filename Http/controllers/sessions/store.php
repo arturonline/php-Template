@@ -3,6 +3,7 @@
 use Core\App;
 use Core\SqliteDb;
 use Core\Validator;
+use Http\Forms\LoginForm;
 
 $db = App::resolve(SqliteDb::class);
 
@@ -13,21 +14,12 @@ $password = $_POST['password'];
 
 // Validate form data
 
-$errors = [];
+$form = new LoginForm();
 
-if (!Validator::email($email)) {
-    $errors['email'] = 'Email is not valid';
-}
+if (! $form->validate($email, $password)) {
 
-if (!Validator::string($password)) {
-    $errors['password'] = 'Password is not valid';
-}
-
-// If something is wrong, return to the form with the errors
-
-if (!empty($errors)) {
     return view('sessions/create', [
-        'errors' => $errors
+        'errors' => $form->errors()
     ]);
 }
 
@@ -37,7 +29,7 @@ $user = $db->query('SELECT * FROM users WHERE user_email = :email', [
     'email' => $email
 ])->find();
 
-if($user) {
+if ($user) {
     if (password_verify($password, $user['user_hash'])) {
         login([
             'email' => $email
