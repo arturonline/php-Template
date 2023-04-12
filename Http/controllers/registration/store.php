@@ -1,6 +1,7 @@
 <?php
 
 use Core\App;
+use Core\Authenticator;
 use Core\SqliteDb;
 use Core\Validator;
 
@@ -32,9 +33,7 @@ $user = $db->query('SELECT * FROM users WHERE user_email = :email', [
 ])->find();
 
 if ($user) {
-    header('Location: /');
-    exit();
-
+    redirect("/");
 } else {
 
     $db->query('INSERT INTO users (user_name, user_email, user_hash) VALUES (:uname, :email, :password)', [
@@ -43,12 +42,12 @@ if ($user) {
         'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
 
-    login([
+    (new Authenticator)->login([
         'email' => $email
     ]);
 
-    header('Location: /');
-    exit();
+    redirect("/");
+
 }
 
 
