@@ -3,8 +3,10 @@
 use Core\App;
 use Core\SqliteDb;
 
+// Get database instance
 $db = App::resolve(SqliteDb::class);
 
+// Get parameters
 $id = $_POST['id'];
 $currentUser_id = 1;
 

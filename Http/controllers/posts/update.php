@@ -4,18 +4,21 @@ use Core\App;
 use Core\SqliteDb;
 use Core\Validator;
 
+// Get database instance
 $db = App::resolve(SqliteDb::class);
 
+// Get parameters
 $id = $_POST['id'];
 $currentUser_id = 1;
 
 // Get post from db
 $query = "select * FROM posts WHERE post_id = :id";
-
 $post = $db->query($query, [$id])->findorFail();
 
+// Authorize
 authorize($id == $currentUser_id);
 
+// Validate
 $errors = [];
 
 if (! Validator::string($post['post_title'], 1, 1000)) {

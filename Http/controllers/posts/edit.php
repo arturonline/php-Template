@@ -2,8 +2,10 @@
 use Core\App;
 use Core\SqliteDb;
 
+// Get Database instance
 $db = App::resolve(SqliteDb::class);
 
+// Get parameters
 $id = $_GET['id'];
 $currentUser_id = 1;
 

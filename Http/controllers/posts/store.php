@@ -4,6 +4,7 @@ use Core\App;
 use Core\Validator;
 use Core\SqliteDb;
 
+// Get database instance
 $db = App::resolve(SqliteDb::class);
 
 $errors = [];

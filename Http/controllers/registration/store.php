@@ -5,9 +5,11 @@ use Core\Authenticator;
 use Core\SqliteDb;
 use Core\Validator;
 
+// Get Parameters
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+// Validate parameters
 $errors = [];
 
 if (! Validator::email($email)){
@@ -25,7 +27,7 @@ if (! empty($errors)){
 }
 
 // Check if user exists
-
+// Get database instance
 $db = App::resolve(SqliteDb::class);
 
 $user = $db->query('SELECT * FROM users WHERE user_email = :email', [

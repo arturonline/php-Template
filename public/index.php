@@ -3,24 +3,30 @@
 session_start();
 
 use Core\Router;
+use Core\Session;
 
 const BASE_PATH = __DIR__ . '/../';
-
 require BASE_PATH . 'Core/functions.php';
+require BASE_PATH . 'vendor/autoload.php';
 
-// autoload classes not explicity or manually required
-spl_autoload_register(function ($class) {
-
-    $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-    require base_path("{$class}.php");
-});
-
+// Cargamos sistema de inyección de depencias
 require base_path('bootstrap.php');
 
+// Cargamos el router y sus rutas
 $router = new Router();
 $routes = require base_path('routes.php');
 
+// Cargamos página principal
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
-$router->route($uri, $method);
+try {
+    $router->route($uri, $method);
+} catch (\Core\ValidationException $exception) {
+    Session::flash('errors', $exception->errors);
+    Session::flash('old', $exception->old);
+
+    return redirect($router->previousUrl());
+}
+
+Session::unflash();

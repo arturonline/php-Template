@@ -32,6 +32,7 @@ class Container
 
         $resolver = $this->bindings[$key];
 
+        // call_user_func allows you to invoke a function dynamically without knowing its name in advance.
         return call_user_func($resolver);
 
 

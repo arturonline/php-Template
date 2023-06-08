@@ -9,7 +9,6 @@ use Core\Middleware\Middleware;
 class Router {
     protected $routes = [];
 
-
     public function add($method, $uri, $controller)
     {
         $this->routes[] = [
@@ -59,6 +58,10 @@ class Router {
             }
         }
         abort();
+    }
+
+    public function previousUrl() {
+        return $_SERVER['HTTP_REFERER'];
     }
 
 }
